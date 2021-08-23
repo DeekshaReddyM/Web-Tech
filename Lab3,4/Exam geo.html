@@ -1,0 +1,24 @@
+<h1 id="Geolocation">Location will appear here</h1>
+<script>
+	function getLocation(){
+		if(navigator.geolocation){
+			navigator.geolocation.getCurrentPosition(showPosition);
+		} else {
+			document.getElementById("geolocation").innerHTML = "Geolocation is not supported by this browser";
+		}
+	}
+
+	function showPosition(position){
+		console.log(position);
+		document.getElementById("geolocation").innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+
+		var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+		
+	}
+
+	getLocation();
+
+</script>
+
+('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5843211671486!2d77.60382841473228!3d12.934416790880249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15b277a93807%3A0x88518f37b39dabd0!2sCHRIST%20(Deemed%20to%20be%20University)!5e0!3m2!1sen!2sin!4v1629733283095!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>' + latlon);
