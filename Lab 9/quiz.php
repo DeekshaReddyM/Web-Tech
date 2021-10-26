@@ -2,7 +2,7 @@
 <head>
  <meta charset=UTF-8" />
  
- <title>PHP QUIZ </title>
+ <title>Online Exam </title>
  
  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
@@ -11,7 +11,7 @@
  
  <div id="page-wrap">
  
- <h1>Simple Online Exam Built On PHP</h1>
+ <h1>Simple Online Exam</h1>
  
  <form action="result.php" method="post" id="quiz">
  
